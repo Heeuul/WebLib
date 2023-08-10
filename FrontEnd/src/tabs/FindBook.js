@@ -14,7 +14,7 @@ export default function FindBook() {
     e.preventDefault();
     if (!keyword) return;
 
-    fetch("http://localhost:8080/books?" + filter + "=" + keyword)
+    fetch("http://localhost:10102/books?" + filter + "=" + keyword)
       .then((res) => res.json())
       .then((result) => SetResults(result))
       .then(() => console.log("Found " + results.length + " results"));

@@ -32,7 +32,7 @@ export default function AddBook() {
       year,
     };
 
-    fetch("http://localhost:8080/books/new", {
+    fetch("http://localhost:10102/books/new", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newBook),

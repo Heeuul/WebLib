@@ -43,7 +43,7 @@ export default function UpdateBook() {
       isbn: ISBN.trim(),
     };
 
-    fetch("http://localhost:8080/books/" + currentBook.id, {
+    fetch("http://localhost:10102/books/" + currentBook.id, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updatedBook),
