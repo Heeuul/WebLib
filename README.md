@@ -2,11 +2,11 @@
 Full stack web app for storing books. 
 
 ## To Run Web App 
-1. Make sure docker is installed and running. 
-2. Clone repository or download as zip. 
-3. Go to root folder of ./WebLib/ and start the container with `docker-compose -p weblib up -d`. (first time creation will take a while) 
-5. Go to `http://localhost:10101` on your browser (fully supported browsers are Chrome, Firefox, and Safari). 
-6. Once finished exploring the features, stop the container with `docker-compose -p weblib stop` or remove them with `docker-compose -p weblib down -v`. 
+**Prerequisite**: Make sure docker is installed and running. 
+1. Clone repository or download as zip.
+2. Go to root folder of ./WebLib/ and start the container with `docker-compose -p weblib up -d`. First time creation will take a while. 
+3. Go to `http://localhost:10101` on your browser. Fully supported browsers are Chrome, Firefox, and Safari.
+4. Once finished exploring the features, stop the container with `docker-compose -p weblib stop` or remove them with `docker-compose -p weblib down -v`. 
 
 ## RESTful API Operations 
 You can perform RESTful API operations on `http://localhost:10102/books` (e.g., using Postman or Axios) when the container is running. 
@@ -23,8 +23,6 @@ You can perform RESTful API operations on `http://localhost:10102/books` (e.g., 
 > GET `http://localhost:10102/books` 
 ### Get a single Book by ID 
 > GET `http://localhost:10102/books/{bookID}` 
-
-Example: `http://localhost:10102/books/32` 
 ### Get Book(s) based on parameters and keywords 
 > GET `http://localhost:10102/books?{param1}={value1}&{param2}={value2}&...` 
 
@@ -33,7 +31,7 @@ Example: `http://localhost:10102/books/32`
 |-----------|------------|---------| 
 | author | text | `http://localhost:10102/books?author=James` | 
 | title | text | `http://localhost:10102/books?title=How` | 
-| country | text | `http://localhost:10102/books?country=German` | 
+| country | text | `http://localhost:10102/books?country=Nigeria` | 
 | language | text | `http://localhost:10102/books?language=French` | 
 | link | text | `http://localhost:10102/books?link=amazon` | 
 | pages | number | `http://localhost:10102/books?pages=200` | 
