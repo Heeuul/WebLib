@@ -23,19 +23,19 @@ public class BookController {
 
     // Create a new Book
     @PostMapping("/books/new")
-    public Book CreateNote(@Valid @RequestBody Book book) {
+    public Book AddABook(@Valid @RequestBody Book book) {
         return bookRepository.save(book);
     }
 
     // Create multiple Books
     @PostMapping("/books/newlist")
-    public List<Book> CreateNotes(@Valid @RequestBody List<Book> books) {
+    public List<Book> AddBooks(@Valid @RequestBody List<Book> books) {
         return bookRepository.saveAll(books);
     }
 
-    // Get all Books
+    // Get Book(s) based on keywords, or all Books if no parameter
     @GetMapping("/books")
-    public List<Book> GetAllNotes(@RequestParam(required = false) Map<String, String> params) {
+    public List<Book> GetBooks(@RequestParam(required = false) Map<String, String> params) {
         if (params.isEmpty())
             return bookRepository.findAll();
 
