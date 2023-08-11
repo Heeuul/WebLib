@@ -80,7 +80,7 @@ services:
     ... 
 ```
 
-### Website error 
+### Website Error(s) 
 > e.data.startsWith() does not exist  
 
 This means that the web app framework (ReactJS) does not support the current browser. Please try to access the site with a different browser. Fully supported browsers are Chrome, Firefox, and Safari. 
