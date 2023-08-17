@@ -35,12 +35,12 @@ export default function UpdateBook() {
       id: currentBook.id,
       author: author.trim(),
       title: title.trim(),
-      country: country.trim(),
-      language: lang.trim(),
-      link: link.trim(),
+      country: country?.trim(),
+      language: lang?.trim(),
+      link: link?.trim(),
       pages: pages,
-      year: year.toString(),
-      isbn: ISBN.trim(),
+      year: year?.toString(),
+      isbn: ISBN?.trim(),
     };
 
     fetch("http://localhost:10102/books/" + currentBook.id, {
